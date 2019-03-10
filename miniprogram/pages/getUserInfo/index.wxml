@@ -1,0 +1,13 @@
+<view class="container">
+  <image src="../../images/background.jpg" class='image' />
+  <button
+    wx:if="{{canIUse}}"
+    open-type="getUserInfo"
+    bindgetuserinfo="bindGetUserInfo"
+    class="loginButton"
+  >
+    授权登录
+  </button>
+  <view wx:else>请升级微信版本</view>
+</view>
+<!-- 需要使用 button 来授权登录 -->

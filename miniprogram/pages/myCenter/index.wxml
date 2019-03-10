@@ -1,0 +1,18 @@
+<view >
+  <view class='userInfo'>
+    <image src="{{avatarUrl}}" class='avatar' />
+    <view class="nickName">{{nickName}}</view>
+  </view>
+  <van-cell-group>
+    <van-cell
+      title="我的书柜"
+      icon="bookmark-o"
+      is-link
+    />
+    <van-cell
+      title="留言反馈"
+      icon="chat-o"
+      is-link
+    />
+  </van-cell-group>
+</view>

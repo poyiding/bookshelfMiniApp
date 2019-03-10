@@ -1,0 +1,37 @@
+<view class="imgBox">
+  <image src="{{bookDetail.image}}" class="bookImg" />
+</view>
+<view class="infoBox bottomLine">
+  <view class="info">
+    <view wx:for="{{bookDetail.author}}" wx:key="*this" wx:for-index="index" >
+      <span>作者：</span>
+      <span>{{item}}</span>
+      <span wx:if="{{bookDetail.author.length !== index + 1 }}">、</span>
+    </view>
+    <view>出版：{{bookDetail.publisher}}</view>
+    <view>ISBN：{{bookDetail.isbn13}}</view>
+    <view>定价：{{bookDetail.price}}</view>
+  </view>
+  <view class="score">
+    <view>豆瓣评分</view>
+    <view class="scoreNum">{{bookDetail.rating.average}}</view>
+    <view>{{bookDetail.rating.numRaters}}人</view>
+  </view>
+</view>
+<view class='textBox bottomLine'>
+  <view class='titleText'>介绍</view>
+  <view>{{bookDetail.summary}}</view>
+</view>
+<view class='textBox'>
+  <view class='titleText'>关于作者</view>
+  <view>{{bookDetail.author_intro}}</view>
+</view>
+<view>
+  <van-button round type="primary" class='btn addBtn' bind:click="addShelf" >
+    <van-icon name="like-o" custom-style="top: 3px; padding-right: 5px" />加入书架
+  </van-button>
+  <van-button round type="primary" class='btn shareBtn' bind:click="handleShare" >
+    <van-icon name="share" custom-style="top: 3px;padding-right: 5px" />分享好友
+  </van-button>
+</view>
+

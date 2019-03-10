@@ -1,0 +1,12 @@
+/* pages/index/index.wxss */
+.box {
+	padding: 0 15px;
+}
+.bookItem {
+	padding: 10px 0;
+	text-align: center;
+}
+.bookItem image {
+	width: 100%;
+	height: 150px;
+}

@@ -1,0 +1,9 @@
+.userInfo {
+  padding: 30px;
+  text-align: center;
+}
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+}

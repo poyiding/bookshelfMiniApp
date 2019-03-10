@@ -1,0 +1,19 @@
+.resultItem {
+  background: #fefffb;
+  padding: 20px;
+}
+.image {
+  width:80px;
+  height:116px;
+  vertical-align:top;
+}
+.title,.author,.score,.press {
+  color: #999;
+  font-size: 12px;
+  line-height: 23px;
+}
+.title {
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+}

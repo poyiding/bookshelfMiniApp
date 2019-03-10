@@ -1,0 +1,14 @@
+.container {
+  height: 100vh;
+}
+.container image {
+  width: 100%;
+  height: 80%;
+}
+.loginButton {
+  width: 50%;
+  margin-top: 5vh;
+  color: #fff;
+  background-color: #25b864;
+  border-color: #25b864;
+}
