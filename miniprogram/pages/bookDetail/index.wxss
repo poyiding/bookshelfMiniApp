@@ -50,6 +50,6 @@
 .shareBtn button {
   right: 20px;
 }
-.addBtn button {
+.operationBtn button {
   left: 20px;
 }

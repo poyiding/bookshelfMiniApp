@@ -1,14 +1,14 @@
 <view >
   <van-search
-  value="{{ value }}"
-  placeholder="书名/作者/ISBN"
-  use-action-slot
-  bind:search="onSearch"
->
-  <view slot="action" bind:tap="onScanCode">
-    <van-icon name="scan" size="20px" custom-style="margin-top: 10px" />
-  </view>
-</van-search>
+    value="{{ value }}"
+    placeholder="书名/作者/ISBN"
+    use-action-slot
+    bind:search="onSearch"
+  >
+    <view slot="action" bind:tap="onScanCode">
+      <van-icon name="scan" size="20px" custom-style="margin-top: 10px" />
+    </view>
+  </van-search>
   <van-cell
     title="为你推荐"
     icon="location-o"
@@ -23,5 +23,6 @@
       </van-col>
     </van-row>
   </view>
+  <view bind:tap='handleClick'>授权</view>
 </view>
 

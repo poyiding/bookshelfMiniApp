@@ -3,7 +3,6 @@
     "pages/home/index",
     "pages/bookDetail/index",
     "pages/myCenter/index",
-    "pages/test/index",
     "pages/queryResult/index",
     "pages/getUserInfo/index"
   ],

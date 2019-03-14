@@ -15,15 +15,19 @@ Page({
 			}
 		],
 	},
-  // onLoad: function() {
-  //   console.log(app.globalData);
-  //   if (!app.globalData.authorized) {
-  //     wx.redirectTo({
-  //       url: '/pages/getUserInfo/index'
-  //     });
-  //   }
-  // },
-
+  onLoad: function() {
+    console.log(app.globalData);
+    if (!app.globalData.userInfo) {
+      wx.redirectTo({
+        url: '/pages/getUserInfo/index'
+      });
+    }
+  },
+  handleClick: function() {
+      wx.redirectTo({
+        url: '/pages/getUserInfo/index'
+      });
+  },
   onSearch: function(info) {
     const queryParam = info.detail;
     if (queryParam) {

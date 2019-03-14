@@ -1,5 +1,3 @@
-// 云函数模板,暂时没用到这个云函数
-
 const cloud = require('wx-server-sdk')
 
 // 初始化 cloud
