@@ -5,7 +5,7 @@ Page({
     nickName: '',
 	},
 	onLoad: function(options) {
-    const { avatarUrl, nickName } = app.globalData;
+    const { avatarUrl, nickName } = app.globalData.userInfo;
     this.setData({
       avatarUrl,
       nickName,
