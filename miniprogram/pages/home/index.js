@@ -16,12 +16,12 @@ Page({
 		],
 	},
   onLoad: function() {
-    console.log(app.globalData);
-    if (!app.globalData.userInfo) {
-      wx.redirectTo({
-        url: '/pages/getUserInfo/index'
-      });
-    }
+    // console.log(app.globalData);
+    // if (!app.globalData.userInfo) {
+    //   wx.redirectTo({
+    //     url: '/pages/getUserInfo/index'
+    //   });
+    // }
   },
   handleClick: function() {
       wx.redirectTo({

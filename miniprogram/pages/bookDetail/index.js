@@ -19,11 +19,10 @@ Page({
         bookDetail: res
       });
     });
-    this.queryHasInShelf();
+    this.queryHasInShelf(options.id);
 	},
   // 查询书柜中是否添加过该书
-  queryHasInShelf: function () {
-    const { bookId } = this.data.bookDetail;
+  queryHasInShelf: function (bookId) {
     db.collection('bookCollection').where({
       bookId,
       _openid: 'o2aK45d_ryZH8lsH3I-QHGjNU824',
@@ -63,7 +62,7 @@ Page({
           title: '添加成功',
           duration: 1000
         });
-        that.queryHasInShelf();
+        that.queryHasInShelf(id);
       }
     });
 
@@ -77,7 +76,7 @@ Page({
           title: '移出成功',
           duration: 1000
         });
-        that.queryHasInShelf();
+        that.queryHasInShelf(id);
         // this.setData({
         //   hasInShelf: false
         // });

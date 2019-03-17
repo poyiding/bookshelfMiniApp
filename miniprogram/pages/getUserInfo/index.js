@@ -34,12 +34,12 @@ Page({
       data: {},
       success: res => {
         app.globalData.openid = res.result.openid
-        // db.collection('userList').add({
-        //   data: userInfo,
-        //   success: () => {
-        //     console.log('登录成功');
-        //   }
-        // });
+        db.collection('userList').add({
+          data: userInfo,
+          success: () => {
+            console.log('登录成功');
+          }
+        });
       },
       fail: err => {
         wx.showToast({

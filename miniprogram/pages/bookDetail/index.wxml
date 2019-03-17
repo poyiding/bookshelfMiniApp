@@ -3,10 +3,12 @@
 </view>
 <view class="infoBox bottomLine">
   <view class="info">
-    <view wx:for="{{bookDetail.author}}" wx:key="*this" wx:for-index="index" >
+    <view>
       <span>作者：</span>
-      <span>{{item}}</span>
+      <span wx:for="{{bookDetail.author}}" wx:key="*this" wx:for-index="index">
+      {{item}}
       <span wx:if="{{bookDetail.author.length !== index + 1 }}">、</span>
+    </span>
     </view>
     <view>出版：{{bookDetail.publisher}}</view>
     <view>ISBN：{{bookDetail.isbn13}}</view>
@@ -22,7 +24,7 @@
   <view class='titleText'>介绍</view>
   <view>{{bookDetail.summary}}</view>
 </view>
-<view class='textBox'>
+<view class='textBox' wx:if="{{bookDetail.author_intro}}">
   <view class='titleText'>关于作者</view>
   <view>{{bookDetail.author_intro}}</view>
 </view>
