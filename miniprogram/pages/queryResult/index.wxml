@@ -1,16 +1,8 @@
-<!-- <van-card
-  wx:for="{{queryResult}}"
-  wx:for-item="item"
-  wx:key="unique" 
-  desc="描述信息"
-  title="{{item.title}}"
-  thumb="{{ item.image }}"
-  centered="true"
-/> -->
+
 <view
   wx:for="{{queryResult}}"
   wx:for-item="item"
-  wx:key="unique" 
+  wx:key="unique"
   class="resultItem {{queryResult.length !== index + 1 ? 'bottomLine' : ''}}"
 >
   <navigator

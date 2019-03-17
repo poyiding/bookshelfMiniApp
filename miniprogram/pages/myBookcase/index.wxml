@@ -1,2 +1,19 @@
-<!--miniprogram/pages/myBookcase/index.wxml-->
-<text>miniprogram/pages/myBookcase/index.wxml</text>
+
+<view
+  wx:for="{{bookList}}"
+  wx:for-item="item"
+  wx:key="unique"
+  class="resultItem {{bookList.length !== index + 1 ? 'bottomLine' : ''}}"
+>
+  <van-row>
+    <van-col span="6">
+      <image src="{{item.bookImg}}" class='image' />
+    </van-col>
+    <van-col span="16" offset="1">
+        <view class="title">{{item.bookName}}</view>
+        <view class="author">作者：{{item.author[0]}}</view>
+        <view class="press">出版社：{{item.publisher}}</view>
+        <view class="score">豆瓣评分：{{item.average}}</view>
+    </van-col>
+  </van-row>
+</view>
