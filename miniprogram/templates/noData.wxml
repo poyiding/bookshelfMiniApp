@@ -1,0 +1,6 @@
+
+<template name="noData">
+  <view class='message'>
+    <text> {{message}} </text>
+  </view>
+</template>

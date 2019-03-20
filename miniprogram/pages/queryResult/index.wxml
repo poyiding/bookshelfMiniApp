@@ -1,24 +1,33 @@
 
-<view
-  wx:for="{{queryResult}}"
-  wx:for-item="item"
-  wx:key="unique"
-  class="resultItem {{queryResult.length !== index + 1 ? 'bottomLine' : ''}}"
->
-  <navigator
-    url="/pages/bookDetail/index?id={{item.id}}"
-    hover-class="none"
-  >
-    <van-row>
-      <van-col span="6">
-        <image src="{{item.image}}" class='image' />
-      </van-col>
-      <van-col span="16" offset="1">
-         <view class="title">{{item.title}}</view>
-          <view class="author">作者：{{item.author[0]}}</view>
-          <view class="press">出版社：{{item.publisher}}</view>
-          <view class="score">豆瓣评分：{{item.rating.average}} ({{item.rating.numRaters}})</view>
-      </van-col>
-    </van-row>
-  </navigator>
+
+<import src="../../templates/noData.wxml"/>
+
+<view wx:if="{{queryResult.length === 0 }}">
+  <template is="noData" data="{{message: '暂无搜索结果'}}" />
 </view>
+<view wx:else>
+  <view
+    wx:for="{{queryResult}}"
+    wx:for-item="item"
+    wx:key="unique"
+    class="resultItem {{queryResult.length !== index + 1 ? 'bottomLine' : ''}}"
+  >
+    <navigator
+      url="/pages/bookDetail/index?id={{item.id}}"
+      hover-class="none"
+    >
+      <van-row>
+        <van-col span="6">
+          <image src="{{item.image}}" class='image' />
+        </van-col>
+        <van-col span="16" offset="1">
+          <view class="title">{{item.title}}</view>
+            <view class="author">作者：{{item.author[0]}}</view>
+            <view class="press">出版社：{{item.publisher}}</view>
+            <view class="score">豆瓣评分：{{item.rating.average}} ({{item.rating.numRaters}})</view>
+        </van-col>
+      </van-row>
+    </navigator>
+  </view>
+</view>
+

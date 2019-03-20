@@ -1,5 +1,7 @@
 /**app.wxss**/
 @import "./vant/common/index.wxss";
+@import "./templates/noData.wxss";
+
 page {
   font-size: 14px;
   color: #333;
