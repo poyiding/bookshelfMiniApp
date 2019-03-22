@@ -2,10 +2,7 @@
 
 <import src="../../templates/noData.wxml"/>
 
-<view wx:if="{{queryResult.length === 0 }}">
-  <template is="noData" data="{{message: '暂无搜索结果'}}" />
-</view>
-<view wx:else>
+<view wx:if="{{queryResult.length > 0 }}">
   <view
     wx:for="{{queryResult}}"
     wx:for-item="item"
@@ -31,3 +28,6 @@
   </view>
 </view>
 
+<view wx:else>
+  <template is="noData" data="{{message: '暂无搜索结果'}}" />
+</view>

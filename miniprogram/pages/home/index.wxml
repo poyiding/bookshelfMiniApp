@@ -15,9 +15,23 @@
   />
   <view class="box">
     <van-row gutter="10">
-      <van-col span="8" wx:for="{{recommendBook}}" wx:key="{{item.id}}" >
+      <van-col span="8" wx:for="{{recommend}}" wx:key="{{item.id}}" >
         <view class="bookItem" bind:tap="queryBookDetail" data-bookid="{{item.id}}">
-          <image src="{{item.image}}" class="bookImg" />
+          <image src="{{item.bookImg}}" class="bookImg" />
+          <text>{{item.title}}</text>
+        </view>
+      </van-col>
+    </van-row>
+  </view>
+  <van-cell
+    title="热门"
+    icon="location-o"
+  />
+  <view class="box">
+    <van-row gutter="10">
+      <van-col span="8" wx:for="{{popularBooks}}" wx:key="{{item.id}}" >
+        <view class="bookItem" bind:tap="queryBookDetail" data-bookid="{{item.id}}">
+          <image src="{{item.bookImg}}" class="bookImg" />
           <text>{{item.title}}</text>
         </view>
       </van-col>

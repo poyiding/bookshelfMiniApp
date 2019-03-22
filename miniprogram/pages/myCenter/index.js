@@ -10,5 +10,10 @@ Page({
       avatarUrl,
       nickName,
     })
-	}
+	},
+  onShareAppMessage(res) {
+    return {
+      title: '私房书柜',
+    }
+  }
 })

@@ -1,19 +1,11 @@
 const app = getApp();
+const db = wx.cloud.database();
+
 Page({
 	data: {
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-		recommendBook: [
-			{
-				image: "https://img3.doubanio.com/view/subject/m/public/s1050021.jpg",
-				id: '1064275',
-				title:"老人与海",
-			},
-			{
-				image: "https://img3.doubanio.com/view/subject/m/public/s1070222.jpg",
-				id: '1008145',
-				title:"围城",
-			}
-		],
+    popularBooks:[],
+    recommend: [],
 	},
   onLoad: function() {
     // console.log(app.globalData);
@@ -22,11 +14,23 @@ Page({
     //     url: '/pages/getUserInfo/index'
     //   });
     // }
+    db.collection('bookDatas').doc('XJNdRlsqTi00tp34U_').get({
+      success: res => {
+        if (res.data) {
+          const { popularBooks, recommend } = res.data;
+          this.setData({
+            popularBooks,
+            recommend,
+          });
+        }
+      }
+    })
+
   },
   handleClick: function() {
-      wx.redirectTo({
-        url: '/pages/getUserInfo/index'
-      });
+    wx.redirectTo({
+      url: '/pages/getUserInfo/index'
+    });
   },
   onSearch: function(info) {
     const queryParam = info.detail;
@@ -57,4 +61,10 @@ Page({
 			}
 		})
 	},
+  // 转发
+  onShareAppMessage(res) {
+    return {
+      title: '私房书柜',
+    }
+  }
 })

@@ -35,7 +35,7 @@
   <van-button wx:if="{{hasInShelf}}" round type="primary" class='btn operationBtn' bind:click="removeBook" >
     <van-icon name="delete" custom-style="top: 3px; padding-right: 5px" />移出书柜
   </van-button>
-  <van-button round type="primary" class='btn shareBtn' bind:click="handleShare" >
+  <van-button round open-type="share" type="primary" class='btn shareBtn' bind:click="handleShare" >
     <van-icon name="share" custom-style="top: 3px;padding-right: 5px" />分享好友
   </van-button>
 </view>

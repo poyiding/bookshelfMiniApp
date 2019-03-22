@@ -83,7 +83,10 @@ Page({
       }
     })
   },
-  handleShare: function() {
-    console.log('分享');
+  // 转发
+  onShareAppMessage(res) {
+    return {
+      title: '私房书柜',
+    }
   }
 })

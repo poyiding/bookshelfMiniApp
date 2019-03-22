@@ -10,6 +10,7 @@ Page({
     pages: 0, // 总页数
   },
   onLoad: function () {
+    // _openid 从app 中获取，暂时先写死
     wx.setNavigationBarTitle({
       title: '我的书柜'
     });
@@ -54,7 +55,6 @@ Page({
   onReachBottom: function() {
     const { currentPage, pages } = this.data;
     if (currentPage !== pages) {
-      console.log(pages, 'get pages');
       const current = currentPage + 1;
       this.setData({
         currentPage: current
@@ -63,4 +63,9 @@ Page({
     }
 
   },
+  onShareAppMessage(res) {
+    return {
+      title: '私房书柜',
+    }
+  }
 })
