@@ -12,3 +12,13 @@
 存储：在小程序前端直接上传/下载云端文件，在云开发控制台可视化管理
 
 具体看：[小程序云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
+
+云开发优势：
+
+* 快速接入：只需申请，即可接入小程序云开发
+* 快速实现：云开发将功能深度封装，无需再次封装
+* 无感运维：开发者无需关系运维，只需关心业务逻辑
+
+关于云函数：
+
+云函数其实是 Serverless 中的 Fass， 从项目中 cloudfunctions 中看到有三个文件夹，对应三个函数，每一个函数都是一个服务。有关于 Serverless 的介绍，可以看[Serverless 给前端带来了什么](https://github.com/dt-fe/weekly/blob/master/94.%E7%B2%BE%E8%AF%BB%E3%80%8AServerless%20%E7%BB%99%E5%89%8D%E7%AB%AF%E5%B8%A6%E6%9D%A5%E4%BA%86%E4%BB%80%E4%B9%88%E3%80%8B.md)
